@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<script type="text/javascript" src='jQuery 1.11.0.js'></script>
+	<style type="text/css">
+	
+	.div1
+	{
+		width: 100px;
+		height: 100px;
+		background: gray;
+		float: left;
+		margin:10px;
+	}	
+	.div2
+	{
+		width: 100px;
+		height: 100px;
+		background: red;
+		float: left;
+		margin:10px;
+	}	
+	</style>
+	<script type="text/javascript">
+	$(function(){
+		$('.div1').mouseover(function() {
+			$(this).animate({height:300},500);
+			$('.div2').eq($(this).index()).animate({height:300},500);
+		});
+
+		$('.div1').mouseout(function() {
+			$('.div1').animate({height:100},500);
+			$('.div2').eq($(this).index()).animate({height:100},500);
+		});
+
+	})
+	</script>
+</head>
+<body>
+	<div class='div1'>
+	</div>
+	<div class='div1'>
+	</div>
+	<div class='div1'>
+	</div>
+	<div class='div2'>
+	</div>
+	<div class='div2'>
+	</div>
+	<div class='div2'>
+	</div>
+</body>
+</html>
