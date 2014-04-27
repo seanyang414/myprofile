@@ -12,20 +12,28 @@
 	<script type="text/javascript">	
 	$(function(){
 		//nav bar mouseover
-			$('.cross').click(function()
-			{
-					now=null;
-					//alert('cross');
-					$('.navContent').children('.navBlock').css('display','none');
-					$('.navContent').animate({height:0},300);
-					var correspondATag =  $('.navUl').find('a');
-					correspondATag.animate({letterSpacing:1},100,'linear',function()
-							{
-								correspondATag.animate({height:20,lineHeight:20},200,'swing');
-								correspondATag.css('background','#666');	
-								correspondATag.css('color','white');	
-							});
-			});
+		$('.cross').click(function()
+		{
+				now=null;
+				//alert('cross');
+				$('.navContent').children('.navBlock').css('display','none');
+				$('.navContent').animate({height:0},300);
+				var correspondATag =  $('.navUl').find('a');
+				correspondATag.animate({letterSpacing:1},100,'linear',function()
+						{
+							correspondATag.animate({height:20,lineHeight:20},200,'swing');
+							correspondATag.css('background','#666');	
+							correspondATag.css('color','white');	
+						});
+		});
+		//cross mouse movement
+		$('.cross').mouseover(function(){
+			$(this).animate({opacity:0.8},200,'swing');
+		});
+		$('.cross').mouseout(function(){
+			//alert('a');
+			$(this).animate({opacity:0.5},200);
+		});
 				
 		var now;
 		$('.navUl').find('a').click(function(){return false;});//remove click reaction
