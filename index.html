@@ -1,79 +1,204 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>my resume 1.1</title>
+	<!-- <link rel='stylesheet' media="screen and (min-width: 0px)" href="./My Profile/middle.css"> -->
+	<!-- <link rel="stylesheet" media="screen and (min-width: 700px)" href="./My Profile/large.css"> -->
+	<link rel="stylesheet" href="./My Profile/large.css">
+	<script type="text/javascript" src='./My Profile/jQuery 1.11.0.js'></script>
+	<script type="text/javascript" src='./My Profile/JS.js'></script>
+	<script src="./My Profile/move-perfect.js"></script>
+	<script type="text/javascript">	
+	$(function(){
+		//nav bar mouseover
+			$('.cross').click(function()
+			{
+					now=null;
+					//alert('cross');
+					$('.navContent').children('.navBlock').css('display','none');
+					$('.navContent').animate({height:0},300);
+					var correspondATag =  $('.navUl').find('a');
+					correspondATag.animate({letterSpacing:1},100,'linear',function()
+							{
+								correspondATag.animate({height:20,lineHeight:20},200,'swing');
+								correspondATag.css('background','#666');	
+								correspondATag.css('color','white');	
+							});
+			});
+				
+		var now;
+		$('.navUl').find('a').click(function(){return false;});//remove click reaction
+		$('.navUl').find('a').mouseover(function()
+		{
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Myprofile : my profile website " />
+			var thisBlock = $('.navContent').children('.navBlock').eq($(this).parent().index());
+			var oriATag = $('.navUl').find('a').eq(now);
+	
+			
+			
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+			if($(this).parent().index()==now)
+			{
+				return;//if mouseover the same a tag, no reaction
+			}
+			else
+			{
+					if(now!=null)
+					{
+						
+						$('.navContent').children('.navBlock').css('display','none');
+							
+							oriATag.animate({letterSpacing:1},100,'linear',function()
+							{
+								oriATag.animate({height:20,lineHeight:20},200,'swing');
+								oriATag.css('background','#666');	
+								oriATag.css('color','white');	
+							});	
+						
+					}
+					else{}
+					
 
-    <title>Myprofile</title>
-  </head>
+					$(this).css('background','white');
+					$(this).css('color','black');
+					$(this).animate({height:50,lineHeight:50},200,'swing');
+					$(this).animate({letterSpacing:9},500,'swing');
+					
+						thisBlock.css('display','block');
+					
+					//$('.navContent').children().eq($(this).parent().index()).css('display','block');	
+					
 
-  <body>
+					now=$(this).parent().index();			
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/seanyang414/myprofile">View on GitHub</a>
+			}
 
-          <h1 id="project_title">Myprofile</h1>
-          <h2 id="project_tagline">my profile website </h2>
+			$('.navContent').animate({height:thisBlock.height()},300);
+		
+		});		
+	});
+	
+	</script>
+</head>
+<body class='body'>
+	<header class='mainheader'>
+		<div class='slides'>
+			<ul class='slidesBtn'>
+				<li style='opacity:1;filter: alpha(opacity=100);'></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<div><img style='z-index: 100;' src="./My Profile/largeWeb_head_1.JPG"></div>
+			<div><img src="./My Profile/largeWeb_head_2.JPG"></div>
+			<div><img src="./My Profile/largeWeb_head_3.JPG"></div>
+			<div><img src="./My Profile/largeWeb_head_4.JPG"></div>
+		</div>
+		<nav class='navBar'>
+			<ul style="padding:0px;" class='navUl'>
+				<li><a href="">Education</a></li>
+				<li><a href="">Experience</a></li>
+				<li><a href="">Skill</a></li>
+				<li><a href="">Interests</a></li>
+			</ul>
+		</nav>	
+	</div>
+	</header>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/seanyang414/myprofile/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/seanyang414/myprofile/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+	<div class='navContent'>
+			<img class='cross' src="./My Profile/cross.png">
+			<!--   block_1   -->
+			<div class='navBlock'>
+				<!-- <img class='cross' src="./My Profile/cross.png"> -->
+				<div>
+					<h2>George Washington University</h2> 
+					<h5>Washington, DC</h5>
+					<strong>Master of Science in Computer Science, GPA 3.71(till now)</strong><br>
+					<p>Personal Project: Tee-Time-Booking system database</p>		
+					<p>Group Project: Online-shopping System</p>
+					<br>
+					<h2>Chongqing University of Posts and Telecommunications</h2> 
+					<h5>Chongqing, China</h5>
+					<strong>Bachelor of Science in Software Engineering, June 2011</strong><br>
+					<p>Academic Scholarship of the university 2010 </p>
+					<p>Excellence Award in Literature and Art 2009 </p>
+					<p>Excellence Trainee in Military Training 2008</p>
+				</div>
+			</div>
+			<!--   block_2   -->
+			<div class='navBlock'>
+				<!-- <img class='cross' src="./My Profile/cross.png"> -->
+				<div>
+					<h2>Hewlett-Packard Co. Ltd.,</h2>
+					<h5>Chongqing, China</h5>
+					<strong>Internship Student Aug.2010 - Oct.2010</strong>
+					<p>Project: Enterprise Business to Business.</p>
+					<p>Learned skills: Webpage design, internet programming, database design and management.</p>
+					<h2>Chengdu Inlee Technology, Co. Ltd.,</h2> 
+					<h5>Chengdu, China</h5>
+					<strong>Project Manager Aug.2011 - Feb.2012</strong>
+					<p>Responsible for project management, system architecture initial design, also business model research and development coordination.</p>
+					<p>All the projects were providing service system for the cooperation between the biggest mobile carrier in China and government department.</p>
+					<strong>Projects:</strong>
+					<p><strong>Tianfu Software Park Smartcard System:</strong> a cash-free payment service in the second biggest
+					software park in China.</p>
+					<p><strong>Tobacco Messenger:</strong><br> a service system of cigarettes purchasing for cigarettes dealer and China
+					tobacco monopoly bureau.</p>
+					<p><strong>City Health Supervise System:</strong><br> a service mobile application running on mobile devices of
+					civil service personnel.</p>
+					<p><strong>Patients’ Service Platform:</strong><br> a service system helps to make reservation by SMS or IVR and
+					automatic reminder via SMS.</p>
+					<p><strong>Cloud Music Tool for China Mobile co.:</strong><br> a musical application, like iTunes and Pandora,
+					owned by the biggest mobile carrier in China. </p>
+				</div>
+			</div>
+			<!--   block_3   -->
+			<div class='navBlock'>
+				<!-- <img class='cross' src="./My Profile/cross.png"> -->
+				<div style="text-align: center;">
+					<h2>Specialty:</h2>
+					<p><strong>Web UI and UX design.</strong></p>
+					<p><strong>Web program: HTML, CSS, JavaScrip, jQuery.</strong></p>
+					<p><strong>Design tools: Dreamweave, Sublime, Photoshop.</strong></p>
+					<br>
+					<h2>Other:</h2>
+					<p><strong>Program languages: Java, C and C++.</strong></p>
+					<p><strong>Database Software: Oracle server and MySQL.</strong></p>
+				</div>
+			</div>
+			<!--   block_4   -->
+			<div class='navBlock' style="text-align: center;">
+				<!-- <img class='cross' src="./My Profile/cross.png"> -->
+				<div>
+				  <strong>Photography,</strong>&nbsp&nbsp
+				  <strong>Golf,</strong>&nbsp&nbsp
+				  <strong>Graphic design,</strong>&nbsp&nbsp
+				  <strong>Guitar,</strong>&nbsp&nbsp
+				  <strong>Snowboarding</strong>
+				</div>
+			</div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+	</div><!-- navContent finish -->
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+	<div class='mainContent'>
+		<h1>MainContent</h1>
+		<br>
+		<div>
+			<p>
+				It is one of the few ball games that do not require a standardized playing area. Instead, the game is played on a course, in general consisting of an arranged progression of either nine or 18 holes. Each hole on the course must contain a tee box to start from, and a putting green containing the actual hole. There are various other standardized forms of terrain in between, such as the fairway, rough, and hazards, but each hole on a course, and indeed among virtually all courses, is unique in its specific layout and arrangement.Golf competition is generally played for the lowest number of strokes by an individual, known simply as stroke play, or the lowest score on the most individual holes during a complete round by an individual or team, known as match play. Stroke play is the most commonly seen format at virtually all levels of play, although variations of match play, such as "skins" games, are also seen in televised events. Other forms of scoring also exist.
+			</p>
+			
+		</div>
+	</div>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Myprofile maintained by <a href="https://github.com/seanyang414">seanyang414</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+	<footer class='mainfooter'>
+		<p>Copyright &copy; 2014 <a href="#" title='Masters'>http://seanyang414.github.io/seanyang414/</a></p>
+	</footer>
+	
+</body>
 </html>
