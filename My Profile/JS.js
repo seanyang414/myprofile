@@ -79,7 +79,12 @@ function responsive()
 	$('.slides').css('height',$('.slides').width()*0.43);
 	$('.mainheader').css('height',$('.slides').height()+$('.navBar').height()+3);
 	//nav bar
-	$('.navUl').find('a').css('width', Math.floor(($('body').width())/4-1));
+	$('.navUl').find('li').css('width', Math.floor(($('body').width())/6-1));
+	$('.navUl').find('a').css('width', Math.floor(($('body').width())/9-1));
+	$('.navUl').find('a').css('height', Math.floor(($('body').width())/9-1));
+	//$('.navUl').find('a').css('borderRadius',Math.floor($(this).eq(0).width)/2));
+	$('.navUl').find('a').css('borderRadius', Math.floor(($('body').width())/18-1));
+	$('.navUl').find('a').css('lineHeight',Math.floor(($('body').width())/105-1));
 
 	if($(window).width()<=683)
 	{
