@@ -15,8 +15,9 @@ body
 {
 	background: #EDEDED;
 	color:#000305; 
-	font-size:87.5%; /* Base font size is 14px*/
-	font-family:Arial;
+	/*font-size:87.5%;*/ /* Base font size is 14px*/
+	font-size: 105%;
+	font-family:Myriad Pro, Arial;
 	line-height: 1.5;
 	text-align: left;
 }
@@ -48,7 +49,7 @@ body
 	right: 0;
 	/*bottom: 13px;*/
 	bottom: 2%;
-	z-index: 10000;
+	z-index: 3000;
 }
 
 .mainheader .slidesBtn li
@@ -61,6 +62,27 @@ body
 	filter: alpha(opacity=50);
 	float: left;
 	margin-right: 6px;
+}
+
+.mainheader .slidesTxt
+{
+	position: absolute;
+	left:30px;
+	bottom:8%;
+	z-index: 10000;
+	float:left;
+}
+.sliTxtCon
+{
+	display: none;
+	font-size: 230%;
+	font-weight: 900px;
+	font-variant:small-caps;
+	color: white;
+}
+.sliTxtCon span
+{	
+	line-height: 10px;
 }
 
 .mainheader img
@@ -196,6 +218,8 @@ body
 }
 .navContent .navBlock div
 {
+	opacity: 0;
+	filter:alpha(opacity:0);
 	padding: 8%;
 }
 

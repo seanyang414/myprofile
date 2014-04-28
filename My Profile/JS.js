@@ -14,6 +14,9 @@ window.onload = function()
 
 		var oSlidesBtn = document.getElementsByClassName('slidesBtn')[0];
 		var aSlidesBtn = oSlidesBtn.getElementsByTagName('li');
+
+		var oSildesTxt = document.getElementsByClassName('slidesTxt')[0];
+		var asliTxtCon = oSildesTxt.getElementsByClassName('sliTxtCon');
 		//click slides button
 		for(var i=0; i<aSlidesBtn.length; i++)
 		{
@@ -37,7 +40,11 @@ window.onload = function()
 			for(var i=0; i<aSlidesBtn.length; i++)
 			{
 				startMove(aSlidesBtn[i],{opacity:50});
+				asliTxtCon[i].style.display = 'none';
+				asliTxtCon[i].style.opacity = 0;
+				asliTxtCon[i].style.filter = 'alpha(opacity:0)';
 			}
+			oSildesTxt.style.left = 350+'px';
 
 			startMove(aSlidesBtn[now],{opacity:100});
 
@@ -47,6 +54,9 @@ window.onload = function()
 			aImg[now].style.zIndex = slideZValue; 
 			
 			startMove(aImg[now],{opacity:100});
+			asliTxtCon[now].style.display = 'block';
+			startMove(asliTxtCon[now],{opacity:100});
+			startMove(oSildesTxt,{left:30});
 
 		}
 		//slides run automatic
@@ -67,6 +77,8 @@ window.onload = function()
 		oSlides.onmouseout = function(){
 			slidesTimer = setInterval(autoShow,4500);
 		}
+
+
 	}
 
 
