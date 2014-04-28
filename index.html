@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>my resume 1.1</title>
+	<title>my resume 1.2</title>
 	<!-- <link rel='stylesheet' media="screen and (min-width: 0px)" href="./My Profile/middle.css"> -->
 	<!-- <link rel="stylesheet" media="screen and (min-width: 700px)" href="./My Profile/large.css"> -->
 	<link rel="stylesheet" href="./My Profile/large.css">
 	<script type="text/javascript" src='./My Profile/jQuery 1.11.0.js'></script>
 	<script type="text/javascript" src='./My Profile/JS.js'></script>
 	<script src="./My Profile/move-perfect.js"></script>
-	<script type="text/javascript">	
+	<script type="text/javascript">
 	$(function(){
 		//nav bar mouseover
 		$('.cross').click(function()
@@ -21,8 +21,8 @@
 				var correspondATag =  $('.navUl').find('a');
 				correspondATag.animate({letterSpacing:1},100,'linear',function()
 						{
-							correspondATag.animate({height:20,lineHeight:20},200,'swing');
-							correspondATag.css('background','#666');	
+							correspondATag.animate({marginTop:0,width:$(this).height()},200,'swing');
+							//correspondATag.css('background','#666');	
 							correspondATag.css('color','white');	
 						});
 		});
@@ -59,8 +59,8 @@
 							
 							oriATag.animate({letterSpacing:1},100,'linear',function()
 							{
-								oriATag.animate({height:20,lineHeight:20},200,'swing');
-								oriATag.css('background','#666');	
+								oriATag.animate({marginTop:0,width:$(this).height()},200,'swing');
+								//oriATag.css('background','#666');	
 								oriATag.css('color','white');	
 							});	
 						
@@ -68,10 +68,10 @@
 					else{}
 					
 
-					$(this).css('background','white');
-					$(this).css('color','black');
-					$(this).animate({height:50,lineHeight:50},200,'swing');
-					$(this).animate({letterSpacing:9},500,'swing');
+					//$(this).css('background','white');
+					//$(this).css('color','black');
+					$(this).animate({marginTop:30},400,'swing');
+					$(this).animate({letterSpacing:3,width:$(this).height()*1.2},500,'swing');
 					
 						thisBlock.css('display','block');
 					
@@ -105,7 +105,7 @@
 		</div>
 		<nav class='navBar'>
 			<ul style="padding:0px;" class='navUl'>
-				<li><a href="">Education</a></li>
+				<li><a href=""><span>Education</span></a></li>
 				<li><a href="">Experience</a></li>
 				<li><a href="">Skill</a></li>
 				<li><a href="">Interests</a></li>
@@ -119,7 +119,7 @@
 			<!--   block_1   -->
 			<div class='navBlock'>
 				<!-- <img class='cross' src="./My Profile/cross.png"> -->
-				<div>
+				<div style="margin-left:7%;">
 					<h2>George Washington University</h2> 
 					<h5>Washington, DC</h5>
 					<strong>Master of Science in Computer Science, GPA 3.71(till now)</strong><br>
@@ -137,7 +137,7 @@
 			<!--   block_2   -->
 			<div class='navBlock'>
 				<!-- <img class='cross' src="./My Profile/cross.png"> -->
-				<div>
+				<div style="margin-left:7%;">
 					<h2>Hewlett-Packard Co. Ltd.,</h2>
 					<h5>Chongqing, China</h5>
 					<strong>Internship Student Aug.2010 - Oct.2010</strong>
