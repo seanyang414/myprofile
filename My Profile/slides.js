@@ -68,14 +68,14 @@ window.onload = function()
 			slidesChange();
 		}
 		//let slides work
-		var slidesTimer = setInterval(autoShow,4500);
+		var slidesTimer = setInterval(autoShow,3800);
 
 		//onmouseover slides stop, onmouseout continue
 		oSlides.onmouseover = function(){
 			clearInterval(slidesTimer);
 		}
 		oSlides.onmouseout = function(){
-			slidesTimer = setInterval(autoShow,4500);
+			slidesTimer = setInterval(autoShow,3800);
 		}
 
 
