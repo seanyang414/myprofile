@@ -98,9 +98,9 @@ function responsive()
 	$('.navUl').find('a').css('borderRadius', Math.floor(($('body').width())/18-1));
 	$('.navUl').find('a').css('lineHeight',Math.floor(($('body').width())/105-1));
 
-	// if($(window).width()<=683)
-	// {
-	// 	$('.navUl').find('a').css('width', Math.floor(($('body').width())));
-	// 	$('.mainheader').css('height',$('.slides').height()+4*$('.navBar').height()+2);
-	// }
+	if($(window).width()<=683)
+	{
+		$('.navUl').find('a').css('width', Math.floor(($('body').width())));
+		$('.mainheader').css('height',$('.slides').height()+4*$('.navBar').height()+2);
+	}
 }

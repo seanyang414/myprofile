@@ -92,7 +92,7 @@ body
 	top:0;
 	margin: 2% 0 1% 0;
 	width: 100%;
-
+	box-shadow: 0px 0px 6px 0px #C3C3C3;
 }
 
 .mainheader nav
@@ -163,7 +163,7 @@ body
 }
 .mainheader nav a:hover, .mainheader nav a:active
 {
-	box-shadow: 0px 0px 15px -2px #EA4040;
+	box-shadow: 0px 0px 15px -2px yellow;
 	/*background-color: #CF5C3F;*/
 	/*background-color: #338CC7;*/
 }
@@ -226,16 +226,69 @@ body
 /*   mainContent   */
 .mainContent
 {
+	width: 100%;
 	position: relative;
 	float: left;
 	/*background: white;*/
-	padding: 0 5% 5% 5%;
+	/*padding: 0 5% 5% 5%;*/
 	/*margin: 2% 0 0 0;*/
 	letter-spacing: 1px;
 	line-height: 1.8;
 	text-align: center;
+	margin-top: 3%;
+	/*background-color: yellow;*/
 
 }
+.mainContent .my_gallary
+{
+	margin-top:6%;
+	/*border: 5px solid red;	*/
+}
+.mainContent .my_gallary .gallaryBlock
+{
+	width: 140%;
+	left: -20%;
+	position: relative;
+	float:left;
+	margin-bottom: 5%;
+	/*background: green;*/
+	/*border: 2px solid black;*/
+	/*margin-bottom: 5px;*/
+}
+
+.mainContent .imgLeft
+{
+	position: relative;
+	width: 65%;
+	float: left;
+	box-shadow: 0px 0px 10px 0px gray;
+}
+.mainContent .imgRight
+{
+	position: relative;
+	width: 65%;
+	float: right;
+	box-shadow: 0px 0px 10px 1px gray;
+}
+.gallaryTextDiv_right
+{
+	position: relative;
+	width: 30%;
+	z-index: 100;
+	float: right;
+	padding: 0 2%;
+	margin-top: 7%;
+}
+.gallaryTextDiv_left
+{
+	position: relative;
+	width: 30%;
+	z-index: 100;
+	float: left;
+	padding: 0 2%;
+	margin-top: 7%;	
+}
+
 .mainfooter
 {
 	/*position: relative;*/
@@ -246,6 +299,11 @@ body
 	margin-top: 2%;
 	margin-bottom: 2%;
 	text-align: center;
+	box-shadow: 0px 0px 10px 0px gray;
+}
+.mainfooter a:hover
+{
+	color:yellow;
 }
 
 .mainfooter p
@@ -259,11 +317,6 @@ body
 {
 	position: relative;
 	color: #fff;
-}
-
-.mainfooter a:hover
-{
-	color: #CF5C3F;
 }
 
 
