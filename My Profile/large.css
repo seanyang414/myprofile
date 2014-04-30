@@ -41,22 +41,23 @@ body
 	position: relative;
 	/*float: left;*/
 	width: 100%;
+	margin-bottom: 5%;
 }
 
 .mainheader .slidesBtn
 {
 	position: absolute;
-	right: 0;
+	right: -17%;
 	/*bottom: 13px;*/
-	bottom: 2%;
+	bottom: -20%;
 	z-index: 3000;
 }
 
 .mainheader .slidesBtn li
 {
 	list-style: none;
-	width: 32px;
-	height: 7px;
+	width: 50px;
+	height: 10px;
 	background: #FDFDFD;
 	opacity: 0.5;
 	filter: alpha(opacity=50);
@@ -67,17 +68,18 @@ body
 .mainheader .slidesTxt
 {
 	position: absolute;
-	left:30px;
-	bottom:8%;
+	/*left:-15%;*/
+	left:-30px;
+	bottom:-15%;
 	z-index: 10000;
 	float:left;
 }
 .sliTxtCon
 {
 	display: none;
-	font-size: 230%;
+	font-size: 330%;
 	font-weight: 900px;
-	font-variant:small-caps;
+	/*font-variant:small-caps;*/
 	color: white;
 }
 .sliTxtCon span
@@ -88,10 +90,10 @@ body
 .mainheader img
 {
 	position: absolute;
-	left: 0;
-	top:0;
-	margin: 2% 0 1% 0;
-	width: 100%;
+	left: -20%;
+	top:-7%;
+	margin: 0% 0 1% 0;
+	width: 140%;
 	box-shadow: 0px 0px 6px 0px #C3C3C3;
 }
 
@@ -100,8 +102,8 @@ body
 	position: relative;
 	float: left;
 	height:40px;
-	margin-top: 2%;
-	margin-bottom: 4%;
+	margin-top: 10%;
+	margin-bottom: 0%;
 	width: 100%;
 
 }
@@ -137,7 +139,7 @@ body
 	/*margin: 0 auto;*/
 	/*background: #666;*/
 	text-align: center;
-	font-size: 14px;
+	font-size: 18px;
 	letter-spacing: 1px;
 	color:#FFF;
 	display: inline-block;
@@ -169,12 +171,13 @@ body
 }
 .navContent
 {
-	margin-top: 0%;
+	margin-top: 14%;
 	overflow: hidden;
 	line-height: 25px;
 	position: relative;
 	float: left;
-	width: 100%;
+	width: 110%;
+	left: -5%;
 	/*height:800px;*/
 	/*background-color: #fff;*/
 	/*background-color:#FDFDFD;*/
@@ -185,7 +188,6 @@ body
 
 	/*background*/
 	background-color: #fff; 
-	background-image: 
 	linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
 	linear-gradient(#eee .1em, transparent .1em);
 	background-size: 100% 1.2em;
@@ -291,19 +293,33 @@ body
 
 .mainfooter
 {
-	/*position: relative;*/
-	width: 100%;
-	height: 20%;
+	position: relative;
+	width: 140%;
+	left: -20%;
+	height: 40%;
 	float:left;
 	background-color: #666;
 	margin-top: 2%;
-	margin-bottom: 2%;
 	text-align: center;
 	box-shadow: 0px 0px 10px 0px gray;
 }
-.mainfooter a:hover
+
+.mainfooter .PortraitDiv
 {
-	color:yellow;
+	border-radius: 50px;
+	overflow: hidden;
+	width: 100px;
+	height: 100px;
+	margin: 2% auto 1% auto;
+	background-position: center;
+	background-image: url('Portrait.jpg');
+	background-size: 106px;
+	box-shadow: 0px 0px 10px 6px #5A5A5A;
+}
+
+.mainfooter .Portrait
+{
+	
 }
 
 .mainfooter p
@@ -319,6 +335,9 @@ body
 	color: #fff;
 }
 
-
+.mainfooter a:hover
+{
+	color:yellow;
+}
 
 

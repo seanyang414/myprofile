@@ -56,7 +56,7 @@ window.onload = function()
 			startMove(aImg[now],{opacity:100});
 			asliTxtCon[now].style.display = 'block';
 			startMove(asliTxtCon[now],{opacity:100});
-			startMove(oSildesTxt,{left:30});
+			startMove(oSildesTxt,{left:-30});
 
 		}
 		//slides run automatic
@@ -92,15 +92,16 @@ function responsive()
 	$('.mainheader').css('height',$('.slides').height()+$('.navBar').height()+3);
 	//nav bar
 	$('.navUl').find('li').css('width', Math.floor(($('body').width())/6-1));
-	$('.navUl').find('a').css('width', Math.floor(($('body').width())/9-1));
-	$('.navUl').find('a').css('height', Math.floor(($('body').width())/9-1));
+	$('.navUl').find('a').css('width', Math.floor(($('body').width())/8-1));
+	$('.navUl').find('a').css('height', Math.floor(($('body').width())/8-1));
 	//$('.navUl').find('a').css('borderRadius',Math.floor($(this).eq(0).width)/2));
-	$('.navUl').find('a').css('borderRadius', Math.floor(($('body').width())/18-1));
-	$('.navUl').find('a').css('lineHeight',Math.floor(($('body').width())/105-1));
+	$('.navUl').find('a').css('borderRadius', Math.floor(($('body').width())/16-1));
+	$('.navUl').find('a').css('lineHeight',Math.floor(($('body').width())/115-1));
 
 	if($(window).width()<=683)
 	{
-		$('.navUl').find('a').css('width', Math.floor(($('body').width())));
+		$('.navUl').find('a').css('width', 60);
+		$('.navUl').find('a').css('borderRadius', 30);
 		$('.mainheader').css('height',$('.slides').height()+4*$('.navBar').height()+2);
 	}
 }

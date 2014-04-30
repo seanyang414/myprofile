@@ -6,8 +6,8 @@ $(function(){
 })
 
 $(window).scroll(function(){
-	var upLimit = 400;
-	var downLimit = 400;
+	var upLimit = 400;//show up limit
+	var downLimit = 400;//back up limit
 	if($(window).scrollTop()+$(window).height()>$('.imgLeft').eq(0).offset().top+upLimit)
 		{
 			
