@@ -96,7 +96,7 @@ function responsive()
 	$('.navUl').find('a').css('height', Math.floor(($('body').width())/8-1));
 	//$('.navUl').find('a').css('borderRadius',Math.floor($(this).eq(0).width)/2));
 	$('.navUl').find('a').css('borderRadius', Math.floor(($('body').width())/16-1));
-	$('.navUl').find('a').css('lineHeight',Math.floor(($('body').width())/115-1));
+	$('.navUl').find('a').css('lineHeight',Math.floor(($('body').width())/120-1));
 
 	if($(window).width()<=683)
 	{
