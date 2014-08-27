@@ -2,7 +2,7 @@ window.onresize = function()
 {
 	responsive();
 }
-window.onload = function()
+window.load = function()
 	{
 		
 		responsive();	
